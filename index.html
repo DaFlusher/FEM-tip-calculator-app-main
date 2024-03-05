@@ -27,80 +27,88 @@
         </header>
         <main>
             <section class="calculate-bill">
-                <form>
-                    <div class="bill">
-                        <label for="initial-bill" class="bill-label">Bill</label>
-                        <img src="images/icon-dollar.svg" alt="dollar sign">
-                        <input type="number"  id="initial-bill" style="width: 100%;">
-                    </div>
-
-                    <div class="select-tip">
-                        <h2>Select tip %</h2>
-                        
-                        <div class="display-inputs">
-                            <div class="inputs">
-                                <input type="radio" name="tip-percent" value="0.05" id="five-per">
-                                <label for="five-per" class="custom-label"> 5%</label>
-                            </div>
-                            <div class="inputs">
-                                <input type="radio" name="tip-percent" value="0.1" id="ten-per">
-                                <label for="ten-per" class="custom-label">10%</label>
-                            </div>
-                            <div class="inputs">
-                                <input type="radio" name="tip-percent" value="0.15" id="fifteen-per">
-                                <label for="fifteen-per" class="custom-label">15%</label>
-                            </div>
-                            <div class="inputs">
-                                <input type="radio" name="tip-percent" value="0.25" id="twenty-five-per">
-                                <label for="twenty-five-per" class="custom-label">25%</label>
-                            </div>
-                            <div class="inputs">
-                                 <input type="radio" name="tip-percent" value="0.5" id="fifty-per">
-                                <label for="fifty-per" class="custom-label">50%</label>
-                            </div>
-                            <div class="inputs">
-                                <label class="custom-label extra">
-                                    <input type="number" placeholder="Custom" id="custom-tip" min="2" max="3" >
-                                </label>
-                            </div>
-                            
-                        </div>
+                <div class="forms">
+                    <form>
                         <div class="bill">
-                            <label for="people" class="bill-label">Bill</label>
-                            <img src="/images/icon-person.svg" alt="user icon">
-                            <input type="number" placeholder="" id="people" style="width: 100%;">
+                            <label for="initial-bill" class="bill-label">Bill</label>
+                            <img src="images/icon-dollar.svg" alt="dollar sign">
+                            <input type="number"  id="initial-bill" style="width: 100%;" >
+                        </div>
+    
+                        <div class="select-tip">
+                            <h2>Select tip %</h2>
+                            
+                            <div class="display-inputs">
+                                <div class="inputs">
+                                    <input type="radio" name="tip-percent" value="0.05" id="five-per" >
+                                    <label for="five-per" class="custom-label"> 5%</label>
+                                </div>
+                                <div class="inputs">
+                                    <input type="radio" name="tip-percent" value="0.1" id="ten-per" >
+                                    <label for="ten-per" class="custom-label">10%</label>
+                                </div>
+                                <div class="inputs">
+                                    <input type="radio" name="tip-percent" value="0.15" id="fifteen-per" >
+                                    <label for="fifteen-per" class="custom-label">15%</label>
+                                </div>
+                                <div class="inputs">
+                                    <input type="radio" name="tip-percent" value="0.25" id="twenty-five-per" >
+                                    <label for="twenty-five-per" class="custom-label">25%</label>
+                                </div>
+                                <div class="inputs">
+                                     <input type="radio" name="tip-percent" value="0.5" id="fifty-per" >
+                                    <label for="fifty-per" class="custom-label">50%</label>
+                                </div>
+                                <div class="inputs">
+                                    <label class="custom-label extra">
+                                        <input type="number" placeholder="Custom" id="custom-tip" name="tip-percent" min="2" max="3"  >
+                                    </label>
+                                </div>
+                                
+                            </div>
+                            <div class="bill">
+                                <label for="people" class="bill-label">Number of People</label>
+                                <img src="/images/icon-person.svg" alt="user icon">
+                                <input type="number"  placeholder="" id="people" style="width: 100%;">
+                            </div>
+                            
+    
+                           
+                        
                         </div>
                         
+                    </form>
+    
+                </div>
 
-                       
-                    
-                    </div>
-                    
-                </form>
-
+                <div class="display">
+                    <article class="display-bill" style="height: 100%; box-sizing: border-box; ">
+                        <div class="total-info">
+                            <span class="per-person"><strong>Tip amount</strong><br>/person</span>
+                            <h2 id="tip-per-person"></h2>
+                        </div>
+                        <div class="total-info">
+                            <span class="per-person"><strong>Total</strong><br>/person</span>
+                            <h2 id="total-per-person"></h2>
+                        </div>
+                        <div class="total-info">
+                                
+                        <button id="reset" style="width: 100%;">Reset</button>
+                        </div>
+                        
+                    </article>
+    
+                </div>
                 
-                <article class="display-bill">
-                    <div class="total-info">
-                        <span class="per-person"><strong>Tip amount</strong><br>/person</span>
-                        <h2 id="tip-per-person">$2000</h2>
-                    </div>
-                    <div class="total-info">
-                        <span class="per-person"><strong>Total</strong><br>/person</span>
-                        <h2 id="total-per-person">$2000</h2>
-                    </div>
-                    <div class="total-info">
-                            
-                    <button id="reset" style="width: 100%;">Reset</button>
-                    </div>
-                    
-                </article>
-
+                
+                
             </section>
         </main>
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
+    <div id="show-bill"></div>
   </footer>
   <script src="/index.js"></script>
 </body>

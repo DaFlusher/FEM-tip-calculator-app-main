@@ -11,7 +11,6 @@ body{
 }
 main{
     padding: 20px;
-    background-color: white;
     margin: 0 auto;
 }
 header{
@@ -21,6 +20,7 @@ header{
 
 section{
     padding: 10px;
+    background-color: white
 }
 input[type='radio']{
     display: none;
@@ -92,7 +92,7 @@ div.display-inputs{
 
 label.extra{
     background-color: hsl(189, 41%, 97%);
-    height: 65%;
+    height: 65.25%;
     
 }
 
@@ -127,6 +127,9 @@ article.display-bill{
     background-color: hsl(183, 100%, 15%);
     padding: 10px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 article.display-bill div.total-info{
     display: flex; 
@@ -151,6 +154,9 @@ h2#tip-per-person,#total-per-person{
     color: hsl(172, 67%, 45%);
 }
 
+h2#tip-per-person::before,#total-per-person::before{
+    content: '$';
+}
 button#reset{
     width: 100%;
     background-color:hsl(172, 67%, 45%);
@@ -162,4 +168,21 @@ button#reset{
     font-weight: 700;
     font-size: 1.0625rem;
 
+}
+/* media query */
+@media (min-width: 768px){
+    section.calculate-bill{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+    }
+    main{
+        width: 80%;
+    }
+}
+
+@media (min-width: 1200px){
+    main{
+        width: 60%;
+    }
 }
