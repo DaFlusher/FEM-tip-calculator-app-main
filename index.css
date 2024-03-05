@@ -20,7 +20,8 @@ header{
 
 section{
     padding: 10px;
-    background-color: white
+    background-color: white;
+    border-radius: 8px;
 }
 input[type='radio']{
     display: none;
@@ -92,7 +93,7 @@ div.display-inputs{
 
 label.extra{
     background-color: hsl(189, 41%, 97%);
-    height: 65.25%;
+    height: 65.5%;
     
 }
 
@@ -175,9 +176,13 @@ button#reset{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 40px;
+        padding: 20px;
     }
     main{
         width: 80%;
+    }
+    h2#tip-per-person,#total-per-person{
+        font-size: 2rem;
     }
 }
 
