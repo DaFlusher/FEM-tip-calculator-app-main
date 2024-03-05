@@ -1,0 +1,165 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color:hsl(185, 41%, 84%);
+    
+  font-family: "Space Mono", monospace;
+}
+main{
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+}
+header{
+    text-align: center;
+    padding: 10px;
+}
+
+section{
+    padding: 10px;
+}
+input[type='radio']{
+    display: none;
+}
+
+label.custom-label{
+    background-color: hsl(183, 100%, 15%);
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    
+    
+}
+
+input[type='radio']:checked + label.custom-label{
+    background-color: hsl(172, 67%, 45%);
+}
+
+input[type='number']{
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid hsl(184, 14%, 56%);
+    text-align: center;
+}
+
+input[type='number']::placeholder{
+    color: hsl(184, 14%, 56%);
+    font-weight: 500;
+}
+
+
+.bill label.bill-label, h2{
+    display: block;
+    padding: 8px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+    text-transform: capitalize;
+}
+
+div.select-tip{
+    display: grid;
+    row-gap: 20px;
+    padding: 20px 0;
+}
+
+h2{
+    margin: 0;
+    padding: 0;
+}
+
+div.display-inputs{
+    display: grid;
+    grid-template-columns: repeat(2,100px);
+    gap: 30px;
+    justify-content: center;
+}
+
+label.extra{
+    background-color: hsl(189, 41%, 97%);
+    height: 65%;
+    
+}
+
+input#custom-tip{
+    padding: 0 6px;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    color: hsl(186, 14%, 43%);
+    font-size: 1.25rem;
+    text-align: center;
+
+}
+
+
+
+input#custom-tip::placeholder{
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    font-size: 0.9375rem;
+}
+
+div.bill{
+        position: relative;
+}
+
+div.bill img{
+    position: absolute;
+    padding: 10px;
+}
+
+article.display-bill{
+    background-color: hsl(183, 100%, 15%);
+    padding: 10px;
+    border-radius: 8px;
+}
+article.display-bill div.total-info{
+    display: flex; 
+    align-items: start; 
+    justify-content: space-between;
+    padding: 10px;
+}
+
+strong{
+    color: white;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+span.per-person{
+    font-size: 0.875rem;
+    color: hsl(185, 41%, 84%);
+}
+
+h2#tip-per-person,#total-per-person{
+    font-size: 1.5rem;
+    color: hsl(172, 67%, 45%);
+}
+
+button#reset{
+    width: 100%;
+    background-color:hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.0625rem;
+
+}
